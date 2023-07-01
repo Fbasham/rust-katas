@@ -1,5 +1,6 @@
 use lazy_static::lazy_static;
 
+// global variable declaration at runtime
 lazy_static! {
     static ref v: Vec<u32> = (3..5000000)
         .filter(|&n| {
