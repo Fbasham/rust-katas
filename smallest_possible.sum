@@ -1,0 +1,7 @@
+fn gcd(a: u128, b: u128) -> u128 {
+    if b==0 {a} else {gcd(b,a%b)}
+}
+
+fn solution(a: &[u64]) -> u128 {
+    a.iter().cloned().fold(0,|a,c| gcd(a,c as u128))*a.len() as u128
+}
